@@ -9,13 +9,19 @@ import android.widget.ImageButton
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // setContentView(R.layout.activity_main)
-        setContentView(R.layout.home)
+        setContentView(R.layout.activity_main)
+
+        var scheButton : ImageButton = findViewById(R.id.schedule)
+
+        scheButton.setOnClickListener{
+            val intent = Intent(this@MainActivity, scheduleActivity::class.java)
+            startActivity(intent)
+        }
 
         var calButton : ImageButton = findViewById(R.id.calender)
-        // var scheButton : Button = findViewById(R.id.schedule)
-        calButton.setOnClickListener{
-            val intent = Intent(this@MainActivity, scheduleActivity::class.java)
+
+        calButton.setOnClickListener {
+            val intent = Intent(this@MainActivity, calenderActivity::class.java)
             startActivity(intent)
         }
     }
