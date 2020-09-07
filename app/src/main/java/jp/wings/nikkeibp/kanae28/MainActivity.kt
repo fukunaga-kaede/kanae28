@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar?.title = "home"
+
         var scheButton : ImageButton = findViewById(R.id.schedule)
 
         scheButton.setOnClickListener{
