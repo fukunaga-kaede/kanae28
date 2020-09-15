@@ -9,10 +9,14 @@ class scheduleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_schedule)
 
+        // アクションバーに戻るボタン（←）を追加
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        // アクションバーにタイトル「schedule」を追加
         supportActionBar?.title = "schedule"
     }
 
+    // 戻るボタンの機能を実装
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             android.R.id.home -> finish()

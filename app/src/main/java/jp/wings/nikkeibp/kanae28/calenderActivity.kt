@@ -15,10 +15,13 @@ class calenderActivity : AppCompatActivity() {
 
 
 
-
+        // アクションバーに戻るボタン（←）を追加
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        // アクションバーにタイトル「calender」を追加
         supportActionBar?.title = "calender"
 
+        // plusボタンでadd画面に遷移
         var plusButton : ImageButton = findViewById(R.id.plus)
 
         plusButton.setOnClickListener {
@@ -27,6 +30,7 @@ class calenderActivity : AppCompatActivity() {
         }
     }
 
+    // 戻るボタンの機能を実装
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             android.R.id.home -> finish()

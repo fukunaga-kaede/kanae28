@@ -11,8 +11,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // アクションバー（上の青いところ）にタイトル「home」を追加
         supportActionBar?.title = "home"
 
+        // scheduleボタンでスケジュール画面に遷移
         var scheButton : ImageButton = findViewById(R.id.schedule)
 
         scheButton.setOnClickListener{
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // calenderボタンでカレンダー画面に遷移
         var calButton : ImageButton = findViewById(R.id.calender)
 
         calButton.setOnClickListener {
