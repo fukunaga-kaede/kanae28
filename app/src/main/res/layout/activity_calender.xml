@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B9000000"
+    android:foregroundTint="@color/colorPrimary"
+    android:orientation="vertical"
     tools:context=".calenderActivity">
 
     <ImageView
@@ -34,9 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:background="#34000000"
-        android:weekNumberColor="#9C27B0"
-        android:weekSeparatorLineColor="#2196F3"
+        android:background="#33000000"
+        android:selectedWeekBackgroundColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/room" />
 

@@ -4,9 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.CalendarView
 import android.widget.ImageButton
-import androidx.constraintlayout.widget.ConstraintLayout
 
 class calenderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,16 +13,7 @@ class calenderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calender)
 
-        // CalendarViewの生成
-        val calendarView = CalendarView(this)
-        calendarView.layoutParams = ConstraintLayout.LayoutParams(
-            ConstraintLayout.LayoutParams.MATCH_PARENT,
-            ConstraintLayout.LayoutParams.WRAP_CONTENT
-        )
 
-        // 親レイアウトに、CalendarViewを追加
-        val ConstraintSetLayout = findViewById<ConstraintLayout>(R.id.container)
-        ConstraintLayout.(calendarView)
 
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

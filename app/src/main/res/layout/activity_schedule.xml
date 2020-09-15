@@ -18,14 +18,4 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/room1" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="580dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/schedule" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
