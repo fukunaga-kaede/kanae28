@@ -57,6 +57,17 @@
         app:layout_constraintStart_toEndOf="@+id/textSchedule"
         app:layout_constraintTop_toBottomOf="@+id/calender" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="50dp"
+        android:background="#3C000000"
+        android:text="おはようございます。"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <ImageView
         android:id="@+id/shitsuji"
         android:layout_width="665dp"

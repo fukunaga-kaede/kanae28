@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="@+id/room" />
 
     <ImageView
-        android:id="@+id/shitsuji"
+        android:id="@+id/shitsuji1"
         android:layout_width="369dp"
         android:layout_height="176dp"
         android:layout_marginStart="436dp"

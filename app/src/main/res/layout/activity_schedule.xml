@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/room1" />
 
     <ImageView
-        android:id="@+id/shitsuji"
+        android:id="@+id/shitsuji1"
         android:layout_width="665dp"
         android:layout_height="340dp"
         android:layout_marginStart="208dp"
