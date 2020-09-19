@@ -57,4 +57,14 @@
         app:layout_constraintStart_toEndOf="@+id/textSchedule"
         app:layout_constraintTop_toBottomOf="@+id/calender" />
 
+    <ImageView
+        android:id="@+id/shitsuji"
+        android:layout_width="665dp"
+        android:layout_height="340dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/room"
+        app:layout_constraintTop_toTopOf="@+id/room"
+        app:srcCompat="@drawable/shitsuji" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

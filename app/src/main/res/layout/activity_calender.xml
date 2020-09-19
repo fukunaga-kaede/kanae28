@@ -24,21 +24,32 @@
         android:id="@+id/plus"
         android:layout_width="69dp"
         android:layout_height="73dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="272dp"
+        android:layout_marginEnd="316dp"
         app:layout_constraintEnd_toEndOf="@+id/room"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/plus" />
 
     <CalendarView
         android:id="@+id/container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_width="363dp"
+        android:layout_height="234dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:background="#33000000"
         android:selectedWeekBackgroundColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/room" />
+
+    <ImageView
+        android:id="@+id/shitsuji"
+        android:layout_width="369dp"
+        android:layout_height="176dp"
+        android:layout_marginStart="436dp"
+        android:layout_marginTop="184dp"
+        app:layout_constraintStart_toStartOf="@+id/room"
+        app:layout_constraintTop_toTopOf="@+id/room"
+        app:srcCompat="@drawable/shitsuji" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,7 @@
     tools:context=".scheduleActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/room"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,5 +17,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/room1" />
+
+    <ImageView
+        android:id="@+id/shitsuji"
+        android:layout_width="665dp"
+        android:layout_height="340dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shitsuji" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
