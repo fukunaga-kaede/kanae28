@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.ImageButton
+import android.widget.Button
 
 class calenderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +22,7 @@ class calenderActivity : AppCompatActivity() {
         supportActionBar?.title = "calender"
 
         // plusボタンでadd画面に遷移
-        var plusButton : ImageButton = findViewById(R.id.plus)
+        var plusButton : Button = findViewById(R.id.plus)
 
         plusButton.setOnClickListener {
             val intent = Intent(this@calenderActivity, addActivity::class.java)
