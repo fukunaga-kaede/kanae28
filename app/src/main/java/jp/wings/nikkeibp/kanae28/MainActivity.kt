@@ -2,6 +2,7 @@ package jp.wings.nikkeibp.kanae28
 
 import android.content.Intent
 import android.os.Bundle
+
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageButton
 

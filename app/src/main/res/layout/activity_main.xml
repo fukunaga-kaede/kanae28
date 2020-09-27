@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- 背景画像-->
     <ImageView
         android:id="@+id/room"
         android:layout_width="wrap_content"
@@ -17,26 +18,31 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/room1" />
 
+    <!--スケジュールボタン-->
     <ImageButton
         android:id="@+id/schedule"
         android:layout_width="72dp"
         android:layout_height="73dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="100dp"
+        android:background="#80D69DC8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/schedule" />
 
+    <!--カレンダーボタン-->
     <ImageButton
         android:id="@+id/calender"
         android:layout_width="74dp"
         android:layout_height="76dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="100dp"
+        android:background="#80D69DC8"
         app:layout_constraintStart_toEndOf="@+id/schedule"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/calender" />
 
+    <!--スケジュール(文字)-->
     <TextView
         android:id="@+id/textSchedule"
         android:layout_width="wrap_content"
@@ -47,6 +53,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/schedule" />
 
+    <!--カレンダー(文字)-->
     <TextView
         android:id="@+id/textCalender"
         android:layout_width="wrap_content"
@@ -57,17 +64,7 @@
         app:layout_constraintStart_toEndOf="@+id/textSchedule"
         app:layout_constraintTop_toBottomOf="@+id/calender" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="500dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="50dp"
-        android:background="#3C000000"
-        android:text="おはようございます。"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+    <!--執事(画像)-->
     <ImageView
         android:id="@+id/shitsuji"
         android:layout_width="665dp"
@@ -77,5 +74,50 @@
         app:layout_constraintStart_toStartOf="@+id/room"
         app:layout_constraintTop_toTopOf="@+id/room"
         app:srcCompat="@drawable/shitsuji" />
+
+    <!--吹き出し内レイアウト用余白-->
+    <Space
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/topSpace"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/situzi"/>
+
+    <!-- 吹き出しの背景-->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-10dp"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="@+id/message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topSpace" />
+
+    <!--執事(文字)-->
+    <TextView
+        android:id="@+id/situzi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="執事"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/message"
+        app:layout_constraintEnd_toStartOf="@+id/message"
+        app:layout_constraintStart_toStartOf="@+id/message" />
+
+    <!--台詞-->
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="お嬢様、本日もお疲れ様でした。\nおやすみなさいませ。"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
