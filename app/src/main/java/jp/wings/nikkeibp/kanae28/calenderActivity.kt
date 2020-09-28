@@ -5,6 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.CalendarView
+import android.widget.TextView
+import androidx.core.view.get
+import java.text.SimpleDateFormat
+import java.util.*
 
 class calenderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +33,30 @@ class calenderActivity : AppCompatActivity() {
             val intent = Intent(this@calenderActivity, addActivity::class.java)
             startActivity(intent)
         }
+
+        val format = SimpleDateFormat("yyyy/MM/dd", Locale.US)
+
+        val calendarView = findViewById<CalendarView>(R.id.calendar)
+
+        // 初期選択日を取得
+        val defaultDate = calendarView.date
+        val today = format.format(defaultDate)
+
+        var scheduleText : TextView = findViewById(R.id.message)
+        scheduleText.text = "本日$today の\n予定でございます。"
+
+
+
+        // 日付変更イベントを追加
+        calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
+            val month2 = month +1
+            val date = "$year/$month2/$dayOfMonth"
+
+            var scheduleText : TextView = findViewById(R.id.message)
+            scheduleText.text = "$date の\n予定でございます。"
+        }
+
+
     }
 
     // 戻るボタンの機能を実装
