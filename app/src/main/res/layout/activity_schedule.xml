@@ -22,7 +22,7 @@
 
     <!--執事(画像)-->
     <ImageView
-        android:id="@+id/shitsuji1"
+        android:id="@+id/shitsuji"
         android:layout_width="665dp"
         android:layout_height="340dp"
         android:layout_marginStart="208dp"
@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/topSpace"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/situzi"/>
+        app:layout_constraintBottom_toTopOf="@+id/textShitsuji"/>
 
     <!--吹き出しの背景-->
     <View
@@ -53,7 +53,7 @@
 
     <!--執事(文字)-->
     <TextView
-        android:id="@+id/situzi"
+        android:id="@+id/textShitsuji"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="執事"
