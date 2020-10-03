@@ -7,7 +7,7 @@
     tools:context=".addActivity">
 
     <ImageView
-        android:id="@+id/room"
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"

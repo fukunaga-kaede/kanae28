@@ -5,10 +5,8 @@ import android.os.Bundle
 
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
 import java.util.*
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // calendarボタンでカレンダー画面に遷移
+        // calenderボタンでカレンダー画面に遷移
         var calButton : ImageButton = findViewById(R.id.calendar)
 
         calButton.setOnClickListener {
@@ -40,17 +38,6 @@ class MainActivity : AppCompatActivity() {
 
         //時間の取得 24時間表示
         val time = calendar.get(Calendar.HOUR_OF_DAY)
-
-        //時間に合わせて背景画像を変更
-        val room : ImageView = findViewById<ImageView>(R.id.room)
-
-        if( 4 <= time && time < 16 ){
-            room.setImageResource(R.drawable.room1)
-        }else if( 16 <= time && time < 19 ){
-            room.setImageResource(R.drawable.room2)
-        }else{
-            room.setImageResource(R.drawable.room3)
-        }
 
         //　時間に合わせてメッセージの内容を変更
         var greetText : TextView = findViewById(R.id.message)
