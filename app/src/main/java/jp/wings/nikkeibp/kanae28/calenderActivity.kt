@@ -24,7 +24,7 @@ class calenderActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // アクションバーにタイトル「calender」を追加
-        supportActionBar?.title = "calender"
+        supportActionBar?.title = "calendar"
 
         // plusボタンでadd画面に遷移
         var plusButton : Button = findViewById(R.id.plus)
