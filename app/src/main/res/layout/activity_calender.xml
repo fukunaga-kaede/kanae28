@@ -6,7 +6,11 @@
     android:layout_height="match_parent"
     android:foregroundTint="@color/colorPrimary"
     android:orientation="vertical"
-    tools:context=".calenderActivity">
+    tools:context=".calenderActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    >
 
     <ImageView
         android:id="@+id/room"
@@ -69,6 +73,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/fukidashi" />
 
+
     <TextView
         android:id="@+id/message"
         android:layout_width="130dp"
@@ -82,5 +87,555 @@
         app:layout_constraintTop_toTopOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.491" />
 
+    <TextView
+        android:id="@+id/header_su_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/text_week_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/two_su_text"
+        app:layout_constraintEnd_toStartOf="@+id/header_mo_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/header_su_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/text_week_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/two_su_text"
+        app:layout_constraintEnd_toStartOf="@+id/header_mo_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_mo_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/text_week_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/two_mo_text"
+        app:layout_constraintEnd_toStartOf="@+id/header_tu_text"
+        app:layout_constraintStart_toEndOf="@+id/header_su_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_tu_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/text_week_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/two_tu_text"
+        app:layout_constraintEnd_toStartOf="@+id/header_we_text"
+        app:layout_constraintStart_toEndOf="@+id/header_mo_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_we_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/text_week_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/two_we_text"
+        app:layout_constraintEnd_toStartOf="@+id/header_th_text"
+        app:layout_constraintStart_toEndOf="@+id/header_tu_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_th_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/text_week_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/two_th_text"
+        app:layout_constraintEnd_toStartOf="@+id/header_fr_text"
+        app:layout_constraintStart_toEndOf="@+id/header_we_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_fr_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/text_week_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/two_fr_text"
+        app:layout_constraintEnd_toStartOf="@+id/header_sa_text"
+        app:layout_constraintStart_toEndOf="@+id/header_th_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_sa_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/text_week_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/two_sa_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/header_fr_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/one_su_text"
+        android:layout_width="0dp"
+        android:layout_height="77dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBaseline_toBaselineOf="@+id/one_mo_text"
+        app:layout_constraintEnd_toStartOf="@+id/two_mo_text"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/one_mo_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="523dp"
+        android:layout_marginRight="523dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="@+id/one_tu_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/two_su_text"
+        app:layout_constraintTop_toBottomOf="@+id/header_su_text" />
+
+    <TextView
+        android:id="@+id/one_tu_text"
+        android:layout_width="0dp"
+        android:layout_height="77dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBaseline_toBaselineOf="@+id/one_we_text"
+        app:layout_constraintEnd_toEndOf="@+id/header_tu_text"
+        app:layout_constraintStart_toStartOf="@+id/header_tu_text" />
+
+    <TextView
+        android:id="@+id/one_we_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="@+id/one_th_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_tu_text" />
+
+    <TextView
+        android:id="@+id/one_th_text"
+        android:layout_width="0dp"
+        android:layout_height="77dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBaseline_toBaselineOf="@+id/one_fr_text"
+        app:layout_constraintEnd_toEndOf="@+id/header_th_text"
+        app:layout_constraintStart_toStartOf="@+id/header_th_text" />
+
+    <TextView
+        android:id="@+id/one_fr_text"
+        android:layout_width="0dp"
+        android:layout_height="77dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintEnd_toEndOf="@+id/header_fr_text"
+        app:layout_constraintStart_toEndOf="@+id/header_th_text"
+        app:layout_constraintTop_toBottomOf="@+id/header_th_text" />
+
+    <TextView
+        android:id="@+id/one_sa_text"
+        android:layout_width="0dp"
+        android:layout_height="77dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBaseline_toBaselineOf="@+id/one_fr_text"
+        app:layout_constraintEnd_toEndOf="@+id/header_sa_text"
+        app:layout_constraintStart_toEndOf="@+id/header_fr_text" />
+
+
+    <TextView
+        android:id="@+id/two_su_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/three_su_text"
+        app:layout_constraintEnd_toStartOf="@+id/one_mo_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_su_text" />
+
+    <TextView
+        android:id="@+id/two_mo_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/three_mo_text"
+        app:layout_constraintEnd_toStartOf="@+id/two_tu_text"
+        app:layout_constraintStart_toEndOf="@+id/one_su_text"
+        app:layout_constraintTop_toBottomOf="@+id/header_mo_text" />
+
+    <TextView
+        android:id="@+id/two_tu_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/three_tu_text"
+        app:layout_constraintEnd_toStartOf="@+id/two_we_text"
+        app:layout_constraintStart_toEndOf="@+id/two_mo_text"
+        app:layout_constraintTop_toBottomOf="@+id/header_tu_text" />
+
+    <TextView
+        android:id="@+id/two_we_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/three_we_text"
+        app:layout_constraintEnd_toStartOf="@+id/two_th_text"
+        app:layout_constraintStart_toEndOf="@+id/two_tu_text"
+        app:layout_constraintTop_toBottomOf="@+id/header_we_text" />
+
+    <TextView
+        android:id="@+id/two_th_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/three_th_text"
+        app:layout_constraintEnd_toStartOf="@+id/two_fr_text"
+        app:layout_constraintStart_toEndOf="@+id/two_we_text"
+        app:layout_constraintTop_toBottomOf="@+id/header_th_text" />
+
+    <TextView
+        android:id="@+id/two_fr_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/three_fr_text"
+        app:layout_constraintEnd_toStartOf="@+id/two_sa_text"
+        app:layout_constraintStart_toEndOf="@+id/two_th_text"
+        app:layout_constraintTop_toBottomOf="@+id/header_fr_text" />
+
+    <TextView
+        android:id="@+id/two_sa_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="78dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/four_sa_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/two_fr_text"
+        app:layout_constraintTop_toBottomOf="@+id/header_sa_text" />
+
+
+    <TextView
+        android:id="@+id/three_su_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/four_su_text"
+        app:layout_constraintEnd_toStartOf="@+id/three_mo_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/two_su_text" />
+
+    <TextView
+        android:id="@+id/three_mo_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/four_mo_text"
+        app:layout_constraintEnd_toStartOf="@+id/three_tu_text"
+        app:layout_constraintStart_toEndOf="@+id/three_su_text"
+        app:layout_constraintTop_toBottomOf="@+id/two_mo_text" />
+
+    <TextView
+        android:id="@+id/three_tu_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/four_tu_text"
+        app:layout_constraintEnd_toStartOf="@+id/three_we_text"
+        app:layout_constraintStart_toEndOf="@+id/three_mo_text"
+        app:layout_constraintTop_toBottomOf="@+id/two_tu_text" />
+
+    <TextView
+        android:id="@+id/three_we_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/four_we_text"
+        app:layout_constraintEnd_toStartOf="@+id/three_th_text"
+        app:layout_constraintStart_toEndOf="@+id/three_tu_text"
+        app:layout_constraintTop_toBottomOf="@+id/two_we_text" />
+
+    <TextView
+        android:id="@+id/three_th_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/four_th_text"
+        app:layout_constraintEnd_toStartOf="@+id/three_fr_text"
+        app:layout_constraintStart_toEndOf="@+id/three_we_text"
+        app:layout_constraintTop_toBottomOf="@+id/two_th_text" />
+
+    <TextView
+        android:id="@+id/three_fr_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/four_fr_text"
+        app:layout_constraintEnd_toStartOf="@+id/three_sa_text"
+        app:layout_constraintStart_toEndOf="@+id/three_th_text"
+        app:layout_constraintTop_toBottomOf="@+id/two_fr_text" />
+
+    <TextView
+        android:id="@+id/three_sa_text"
+        android:layout_width="0dp"
+        android:layout_height="105dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBaseline_toBaselineOf="@+id/three_fr_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/three_fr_text" />
+
+
+    <TextView
+        android:id="@+id/four_su_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/five_su_text"
+        app:layout_constraintEnd_toStartOf="@+id/four_mo_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/three_su_text" />
+
+    <TextView
+        android:id="@+id/four_mo_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/five_mo_text"
+        app:layout_constraintEnd_toStartOf="@+id/four_tu_text"
+        app:layout_constraintStart_toEndOf="@+id/four_su_text"
+        app:layout_constraintTop_toBottomOf="@+id/three_mo_text" />
+
+    <TextView
+        android:id="@+id/four_tu_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/five_tu_text"
+        app:layout_constraintEnd_toStartOf="@+id/four_we_text"
+        app:layout_constraintStart_toEndOf="@+id/four_mo_text"
+        app:layout_constraintTop_toBottomOf="@+id/three_tu_text" />
+
+    <TextView
+        android:id="@+id/four_we_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/five_we_text"
+        app:layout_constraintEnd_toStartOf="@+id/four_th_text"
+        app:layout_constraintStart_toEndOf="@+id/four_tu_text"
+        app:layout_constraintTop_toBottomOf="@+id/three_we_text" />
+
+    <TextView
+        android:id="@+id/four_th_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/five_th_text"
+        app:layout_constraintEnd_toStartOf="@+id/four_fr_text"
+        app:layout_constraintStart_toEndOf="@+id/four_we_text"
+        app:layout_constraintTop_toBottomOf="@+id/three_th_text" />
+
+    <TextView
+        android:id="@+id/four_fr_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/five_fr_text"
+        app:layout_constraintEnd_toStartOf="@+id/four_sa_text"
+        app:layout_constraintStart_toEndOf="@+id/four_th_text"
+        app:layout_constraintTop_toBottomOf="@+id/three_fr_text" />
+
+    <TextView
+        android:id="@+id/four_sa_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/five_sa_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/four_fr_text"
+        app:layout_constraintTop_toBottomOf="@+id/two_sa_text" />
+
+
+    <TextView
+        android:id="@+id/five_su_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/five_mo_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/four_su_text" />
+
+    <TextView
+        android:id="@+id/five_mo_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/five_tu_text"
+        app:layout_constraintStart_toEndOf="@+id/five_su_text"
+        app:layout_constraintTop_toBottomOf="@+id/four_mo_text" />
+
+    <TextView
+        android:id="@+id/five_tu_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/five_we_text"
+        app:layout_constraintStart_toEndOf="@+id/five_mo_text"
+        app:layout_constraintTop_toBottomOf="@+id/four_tu_text" />
+
+    <TextView
+        android:id="@+id/five_we_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/five_th_text"
+        app:layout_constraintStart_toEndOf="@+id/five_tu_text"
+        app:layout_constraintTop_toBottomOf="@+id/four_we_text" />
+
+    <TextView
+        android:id="@+id/five_th_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/five_fr_text"
+        app:layout_constraintStart_toEndOf="@+id/five_we_text"
+        app:layout_constraintTop_toBottomOf="@+id/four_th_text" />
+
+    <TextView
+        android:id="@+id/five_fr_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/five_sa_text"
+        app:layout_constraintStart_toEndOf="@+id/five_th_text"
+        app:layout_constraintTop_toBottomOf="@+id/four_fr_text" />
+
+    <TextView
+        android:id="@+id/five_sa_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_day_line"
+        android:gravity="center"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/five_fr_text"
+        app:layout_constraintTop_toBottomOf="@+id/four_sa_text" />
 </androidx.constraintlayout.widget.ConstraintLayout>
