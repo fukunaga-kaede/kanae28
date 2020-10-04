@@ -27,7 +27,7 @@ class calenderActivity : AppCompatActivity() {
         supportActionBar?.title = "calendar"
 
         // plusボタンでadd画面に遷移
-        var plusButton : Button = findViewById(R.id.plus)
+        /*var plusButton : Button = findViewById(R.id.plus)
 
         plusButton.setOnClickListener {
             val intent = Intent(this@calenderActivity, addActivity::class.java)
@@ -54,7 +54,7 @@ class calenderActivity : AppCompatActivity() {
 
             var scheduleText : TextView = findViewById(R.id.message)
             scheduleText.text = "$date の\n予定でございます。"
-        }
+        }*/
 
 
     }

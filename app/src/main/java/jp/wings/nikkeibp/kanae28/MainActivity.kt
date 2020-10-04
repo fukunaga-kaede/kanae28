@@ -5,6 +5,7 @@ import android.os.Bundle
 
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import java.util.*
 
@@ -52,6 +53,17 @@ class MainActivity : AppCompatActivity() {
             greetText.text = "お帰りなさいませ、お嬢様。\nお仕事、お疲れ様でした。"
         }else{
             greetText.text = "お嬢様、本日もお疲れ様でした。\nおやすみなさいませ。"
+        }
+
+        //時間に合わせて背景画像を変更
+        val room : ImageView = findViewById<ImageView>(R.id.room)
+
+        if( 4 <= time && time < 16 ){
+            room.setImageResource(R.drawable.room3)
+        }else if( 16 <= time && time < 19 ){
+            room.setImageResource(R.drawable.room2)
+        }else{
+            room.setImageResource(R.drawable.room3)
         }
 
     }
