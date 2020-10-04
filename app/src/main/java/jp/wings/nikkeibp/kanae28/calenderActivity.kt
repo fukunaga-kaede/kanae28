@@ -56,6 +56,7 @@ class calenderActivity : AppCompatActivity() {
             var scheduleText : TextView = findViewById(R.id.message)
             scheduleText.text = "$date の\n予定でございます。"
         }
+
     }
 
     // 戻るボタンの機能を実装
