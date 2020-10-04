@@ -28,7 +28,7 @@ class calenderActivity : AppCompatActivity() {
         supportActionBar?.title = "calendar"
 
         // plusボタンでadd画面に遷移
-        /*var plusButton : Button = findViewById(R.id.plus)
+        var plusButton : Button = findViewById(R.id.plus)
 
         plusButton.setOnClickListener {
             val intent = Intent(this@calenderActivity, addActivity::class.java)
@@ -55,26 +55,7 @@ class calenderActivity : AppCompatActivity() {
 
             var scheduleText : TextView = findViewById(R.id.message)
             scheduleText.text = "$date の\n予定でございます。"
-        }*/
-
-        //現在時刻の取得
-        val calendar: Calendar = Calendar.getInstance(TimeZone.getTimeZone("Asia/Tokyo"), Locale.JAPAN);
-
-        //時間の取得 24時間表示
-        val time = calendar.get(Calendar.HOUR_OF_DAY)
-
-        //時間に合わせて背景画像を変更
-        val room : ImageView = findViewById<ImageView>(R.id.room)
-
-        if( 4 <= time && time < 16 ){
-            room.setImageResource(R.drawable.room1)
-        }else if( 16 <= time && time < 19 ){
-            room.setImageResource(R.drawable.room2)
-        }else{
-            room.setImageResource(R.drawable.room3)
         }
-
-
     }
 
     // 戻るボタンの機能を実装

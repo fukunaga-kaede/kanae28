@@ -55,17 +55,6 @@ class MainActivity : AppCompatActivity() {
             greetText.text = "お嬢様、本日もお疲れ様でした。\nおやすみなさいませ。"
         }
 
-        //時間に合わせて背景画像を変更
-        val room : ImageView = findViewById<ImageView>(R.id.room)
-
-        if( 4 <= time && time < 16 ){
-            room.setImageResource(R.drawable.room1)
-        }else if( 16 <= time && time < 19 ){
-            room.setImageResource(R.drawable.room2)
-        }else{
-            room.setImageResource(R.drawable.room3)
-        }
-
     }
 
 }
