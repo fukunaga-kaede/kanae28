@@ -1,8 +1,9 @@
 package jp.wings.nikkeibp.kanae28
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
+import android.widget.Button
 import android.widget.ImageView
 import java.util.*
 
@@ -11,11 +12,9 @@ class scheduleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_schedule)
 
-        // アクションバーに戻るボタン（←）を追加
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        // アクションバーにタイトル「schedule」を追加
-        supportActionBar?.title = "schedule"
+        // アクションバーにタイトル「home」を追加
+        supportActionBar?.title = "home"
 
         //現在時刻の取得
         val calendar: Calendar = Calendar.getInstance(TimeZone.getTimeZone("Asia/Tokyo"), Locale.JAPAN);
@@ -33,15 +32,13 @@ class scheduleActivity : AppCompatActivity() {
         }else{
             room.setImageResource(R.drawable.room3)
         }
-    }
 
-    // 戻るボタンの機能を実装
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
-            android.R.id.home -> finish()
-            else -> return super.onOptionsItemSelected(item)
+        // calenderボタンでカレンダー画面に遷移
+        var Button : Button = findViewById(R.id.close)
+
+        Button.setOnClickListener {
+            val intent = Intent(this@scheduleActivity, MainActivity::class.java)
+            startActivity(intent)
         }
-        return true
     }
-
 }
