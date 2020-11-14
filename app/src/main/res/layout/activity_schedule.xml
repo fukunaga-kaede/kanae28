@@ -101,7 +101,7 @@
         android:id="@+id/today"
         android:layout_width="100dp"
         android:layout_height="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="17dp"
         android:layout_marginStart="100dp"
         android:text="本日の予定"
         android:textColor="#FFFFFF"

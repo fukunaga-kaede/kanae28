@@ -166,9 +166,11 @@
                     android:text="バイト"
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toEndOf="@+id/time1"
-                    app:layout_constraintTop_toTopOf="@+id/sche1"  />
+                    app:layout_constraintTop_toTopOf="@+id/sche1" />
 
             </LinearLayout>
+
+
 
             <LinearLayout
             android:id="@+id/LinearLayout3"
@@ -196,7 +198,7 @@
                     android:text="バイト"
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toEndOf="@+id/time1"
-                    app:layout_constraintTop_toTopOf="@+id/sche2"  />
+                    app:layout_constraintTop_toTopOf="@+id/sche2" />
 
             </LinearLayout>
 
@@ -227,6 +229,8 @@
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toEndOf="@+id/time1"
                     app:layout_constraintTop_toTopOf="@+id/sche3"  />
+
+
 
             </LinearLayout>
 

@@ -1,16 +1,17 @@
 package jp.wings.nikkeibp.kanae28
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.CalendarContract
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.CalendarView
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.view.get
+import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.*
+
 
 class calenderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +29,10 @@ class calenderActivity : AppCompatActivity() {
         supportActionBar?.title = "calendar"
 
         //現在時刻の取得
-        val calendar: Calendar = Calendar.getInstance(TimeZone.getTimeZone("Asia/Tokyo"), Locale.JAPAN);
+        val calendar: Calendar = Calendar.getInstance(
+            TimeZone.getTimeZone("Asia/Tokyo"),
+            Locale.JAPAN
+        );
 
         //時間の取得 24時間表示
         val time = calendar.get(Calendar.HOUR_OF_DAY)
@@ -45,12 +49,12 @@ class calenderActivity : AppCompatActivity() {
         }
 
         // plusボタンでadd画面に遷移
-        var plusButton : Button = findViewById(R.id.plus)
+        /*var plusButton : Button = findViewById(R.id.plus)
 
         plusButton.setOnClickListener {
             val intent = Intent(this@calenderActivity, addActivity::class.java)
             startActivity(intent)
-        }
+        }*/
 
         val format = SimpleDateFormat("yyyy/MM/dd", Locale.US)
 
@@ -74,6 +78,37 @@ class calenderActivity : AppCompatActivity() {
             scheduleText.text = "$date の\n予定でございます。"
         }
 
+        val btn: Button = this.findViewById<Button>(R.id.plus)
+        btn.setOnClickListener { // カレンダーアプリを呼び出すIntentの生成
+            val intent = Intent(Intent.ACTION_INSERT, CalendarContract.Events.CONTENT_URI)
+            //スケジュールのタイトル
+            intent.putExtra(CalendarContract.Events.TITLE, "タイトル")
+            //スケジュールの開始時刻 ゼロで現在時刻
+            intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, 0)
+            //スケジュールの終了時刻　ゼロで現在時刻＋１時間
+            intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, 0)
+            //スケジュールの場所
+            intent.putExtra(CalendarContract.Events.EVENT_LOCATION, "")
+            //スケジュールの詳細内容
+            intent.putExtra(CalendarContract.Events.DESCRIPTION, "サンプル")
+            //スケジュールに招待するメールアドレス
+            intent.putExtra(Intent.EXTRA_EMAIL, "メールアドレス")
+            //スケジュールのアクセスレベル
+            intent.putExtra(
+                CalendarContract.Events.ACCESS_LEVEL,
+                CalendarContract.Events.ACCESS_DEFAULT
+            )
+            //スケジュールの同時持ちの可否
+            intent.putExtra(
+                CalendarContract.Events.AVAILABILITY,
+                CalendarContract.Events.AVAILABILITY_FREE
+            )
+            //Intentを呼び出す
+            startActivity(intent)
+        }
+
+
+
     }
 
     // 戻るボタンの機能を実装
@@ -84,4 +119,6 @@ class calenderActivity : AppCompatActivity() {
         }
         return true
     }
+
+
 }
