@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -30,22 +29,12 @@
         android:layout_height="230dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:background="#33000000"
+        android:background="#4DD69DC8"
         android:selectedWeekBackgroundColor="#000000"
+        android:weekNumberColor="#E91E63"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/plus"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="10dp"
-        android:background="#33000000"
-        android:text="+"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/calendar"
-        app:layout_constraintTop_toBottomOf="@+id/calendar" />
 
     <!--台詞-->
 
@@ -53,8 +42,8 @@
         android:id="@+id/shitsuji1"
         android:layout_width="369dp"
         android:layout_height="176dp"
-        android:layout_marginStart="428dp"
-        android:layout_marginTop="216dp"
+        android:layout_marginStart="418dp"
+        android:layout_marginTop="180dp"
         app:layout_constraintStart_toStartOf="@+id/room"
         app:layout_constraintTop_toTopOf="@+id/room"
         app:srcCompat="@drawable/shitsuji" />
@@ -64,8 +53,8 @@
         android:id="@+id/imageView"
         android:layout_width="215dp"
         android:layout_height="105dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/fukidashi" />
@@ -86,18 +75,30 @@
     <View
         android:id="@+id/View"
         android:layout_width="250dp"
-        android:layout_height="180dp"
+        android:layout_height="100dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:background="#80000000"
+        android:background="#33000000"
         app:layout_constraintStart_toEndOf="@id/calendar"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="#33000000"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/View"
+        app:layout_constraintTop_toBottomOf="@+id/View" />
 
 
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="250dp"
-        android:layout_height="180dp"
+        android:layout_height="100dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toEndOf="@id/calendar"
@@ -136,15 +137,15 @@
                     android:text="バイト"
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toEndOf="@+id/time1"
-                    app:layout_constraintTop_toTopOf="@+id/scrollView"  />
+                    app:layout_constraintTop_toTopOf="@+id/scrollView" />
 
             </LinearLayout>
 
             <LinearLayout
-            android:id="@+id/LinearLayout2"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="horizontal">
+                android:id="@+id/LinearLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/time2"
@@ -171,12 +172,11 @@
             </LinearLayout>
 
 
-
             <LinearLayout
-            android:id="@+id/LinearLayout3"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="horizontal">
+                android:id="@+id/LinearLayout3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/time3"
@@ -228,8 +228,7 @@
                     android:text="バイト"
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toEndOf="@+id/time1"
-                    app:layout_constraintTop_toTopOf="@+id/sche3"  />
-
+                    app:layout_constraintTop_toTopOf="@+id/sche3" />
 
 
             </LinearLayout>
@@ -260,7 +259,7 @@
                     android:text="バイト"
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toEndOf="@+id/time1"
-                    app:layout_constraintTop_toTopOf="@+id/sche4"  />
+                    app:layout_constraintTop_toTopOf="@+id/sche4" />
 
             </LinearLayout>
 
