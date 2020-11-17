@@ -56,7 +56,7 @@
         android:id="@+id/situzi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="執事"
+        android:text="二階堂"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/message"
         app:layout_constraintEnd_toStartOf="@+id/message"
