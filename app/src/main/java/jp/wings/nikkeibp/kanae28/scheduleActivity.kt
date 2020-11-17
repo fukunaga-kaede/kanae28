@@ -49,9 +49,7 @@ class scheduleActivity : AppCompatActivity() {
             room.setImageResource(R.drawable.room3)
         }
 
-
-
-        // calenderボタンでカレンダー画面に遷移
+        // 「×」ボタンで消える
         var Button : Button = findViewById(R.id.close)
 
         Button.setOnClickListener {

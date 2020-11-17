@@ -9,8 +9,7 @@
     tools:context=".calenderActivity">
 
 
-    <!--吹き出し-->
-
+    <!-- 背景画像 -->
     <ImageView
         android:id="@+id/room"
         android:layout_width="wrap_content"
@@ -23,6 +22,7 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/room1" />
 
+    <!-- カレンダー -->
     <CalendarView
         android:id="@+id/calendar"
         android:layout_width="370dp"
@@ -34,8 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <!--台詞-->
-
+    <!-- 執事（画像） -->
     <ImageView
         android:id="@+id/shitsuji1"
         android:layout_width="369dp"
@@ -46,7 +45,7 @@
         app:layout_constraintTop_toTopOf="@+id/room"
         app:srcCompat="@drawable/shitsuji" />
 
-
+    <!-- 吹き出し -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="215dp"
@@ -60,6 +59,7 @@
         app:srcCompat="@drawable/fukidashi"
         tools:srcCompat="@drawable/fukidashi" />
 
+    <!-- 台詞 -->
     <TextView
         android:id="@+id/message"
         android:layout_width="130dp"
@@ -73,6 +73,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.491" />
 
+    <!-- 予定表示部分（背景） -->
     <View
         android:id="@+id/View"
         android:layout_width="250dp"
@@ -83,6 +84,7 @@
         app:layout_constraintStart_toEndOf="@id/calendar"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- 予定追加ボタン -->
     <Button
         android:id="@+id/plus"
         android:layout_width="45dp"
@@ -95,7 +97,7 @@
         app:layout_constraintEnd_toEndOf="@+id/View"
         app:layout_constraintTop_toBottomOf="@+id/View" />
 
-
+    <!-- 予定表示部分（スクロール） -->
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="250dp"
@@ -105,6 +107,7 @@
         app:layout_constraintStart_toEndOf="@id/calendar"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!-- 予定表示部分（内容） -->
         <LinearLayout
             android:id="@+id/LinearLayout"
             android:layout_width="fill_parent"
@@ -264,6 +267,7 @@
 
             </LinearLayout>
 
+            <!-- 予定表示部分（下の余白） -->
             <Space
                 android:id="@+id/Space"
                 android:layout_width="wrap_content"

@@ -76,6 +76,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- 予定表示部分の背景 -->
     <View
         android:id="@+id/View"
         android:layout_width="350dp"
@@ -86,6 +87,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- 予定表示部分の閉じるボタン -->
     <Button
         android:id="@+id/close"
         android:layout_width="30dp"
@@ -97,6 +99,7 @@
         app:layout_constraintEnd_toEndOf="@+id/View"
         app:layout_constraintTop_toTopOf="@+id/View" />
 
+    <!-- 文字（本日の予定） -->
     <TextView
         android:id="@+id/today"
         android:layout_width="100dp"
@@ -108,6 +111,7 @@
         app:layout_constraintStart_toStartOf="@+id/View"
         app:layout_constraintTop_toTopOf="@+id/View" />
 
+    <!-- 予定表示部分（スクロール） -->
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="350dp"
@@ -117,6 +121,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+        <!-- 予定表示部分（内容） -->
         <LinearLayout
             android:id="@+id/LinearLayout"
             android:layout_width="fill_parent"
@@ -274,6 +279,7 @@
 
             </LinearLayout>
 
+            <!-- 予定表示部分（下の余白） -->
             <Space
                 android:id="@+id/Space"
                 android:layout_width="wrap_content"

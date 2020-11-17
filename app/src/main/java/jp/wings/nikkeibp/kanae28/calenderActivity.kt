@@ -48,16 +48,11 @@ class calenderActivity : AppCompatActivity() {
             room.setImageResource(R.drawable.room3)
         }
 
-        // plusボタンでadd画面に遷移
-        /*var plusButton : Button = findViewById(R.id.plus)
 
-        plusButton.setOnClickListener {
-            val intent = Intent(this@calenderActivity, addActivity::class.java)
-            startActivity(intent)
-        }*/
-
+        // 日付のフォーマットを設定
         val format = SimpleDateFormat("yyyy/MM/dd", Locale.US)
 
+        // カレンダービューのidを取得
         val calendarView = findViewById<CalendarView>(R.id.calendar)
 
         // 初期選択日を取得
