@@ -27,6 +27,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // fortuneボタンで占い画面に遷移
+        var forButton : ImageButton = findViewById(R.id.fortune)
+
+        forButton.setOnClickListener {
+            val intent = Intent(this@MainActivity, fortuneActivity::class.java)
+            startActivity(intent)
+        }
+
         // calenderボタンでカレンダー画面に遷移
         var calButton : ImageButton = findViewById(R.id.calendar)
 
