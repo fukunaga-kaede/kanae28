@@ -2,6 +2,7 @@ package jp.wings.nikkeibp.kanae28
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_fortune.*
 import org.json.JSONException
 import org.json.JSONObject
@@ -13,6 +14,12 @@ class fortuneActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fortune)
+
+        // アクションバーに戻るボタン（←）を追加
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        // アクションバーにタイトル「fortune」を追加
+        supportActionBar?.title = "fortune"
 
 
         val assetManager = resources.assets //アセット呼び出し
@@ -26,6 +33,7 @@ class fortuneActivity : AppCompatActivity() {
             val jsonObject = JSONObject(str)
             val jsonArray = jsonObject.getJSONArray("fortune")
 
+            //1～12のランダムな整数をiに代入
             val i = Random().nextInt(12)
 
             val jsonData = jsonArray.getJSONObject(i)
@@ -37,6 +45,15 @@ class fortuneActivity : AppCompatActivity() {
         }catch (e: JSONException) {
             e.printStackTrace()
         }
+    }
+
+    // 戻るボタンの機能を実装
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            android.R.id.home -> finish()
+            else -> return super.onOptionsItemSelected(item)
+        }
+        return true
     }
 
 
