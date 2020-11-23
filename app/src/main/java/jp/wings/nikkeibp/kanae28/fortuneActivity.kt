@@ -7,6 +7,7 @@ import org.json.JSONException
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
+import java.util.*
 
 class fortuneActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,15 +20,19 @@ class fortuneActivity : AppCompatActivity() {
         val bufferedReader = BufferedReader(InputStreamReader(inputStream))
         val str: String = bufferedReader.readText() //データ
 
+
+
         try {
             val jsonObject = JSONObject(str)
             val jsonArray = jsonObject.getJSONArray("fortune")
 
-            var i = 0;
+            val i = Random().nextInt(12)
 
             val jsonData = jsonArray.getJSONObject(i)
-            textView.text = "${jsonData.getString("item")}"
-            textView2.text = "${jsonData.getInt("money")}"
+            textView1.text = "${jsonData.getString("content")}"
+            textView2.text = "ラッキーアイテム : ${jsonData.getString("item")}"
+            textView3.text = "ラッキーカラー : ${jsonData.getString("color")}"
+
 
         }catch (e: JSONException) {
             e.printStackTrace()
