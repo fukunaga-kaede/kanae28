@@ -14,7 +14,7 @@ class fortuneActivity : AppCompatActivity() {
         setContentView(R.layout.activity_fortune)
 
 
-        /*val assetManager = resources.assets //アセット呼び出し
+        val assetManager = resources.assets //アセット呼び出し
         val inputStream = assetManager.open("fortune.json") //Jsonファイル
         val bufferedReader = BufferedReader(InputStreamReader(inputStream))
         val str: String = bufferedReader.readText() //データ
@@ -31,7 +31,7 @@ class fortuneActivity : AppCompatActivity() {
 
         }catch (e: JSONException) {
             e.printStackTrace()
-        }*/
+        }
     }
 
 
