@@ -29,7 +29,7 @@
         android:layout_height="230dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:background="#32FFF5D0"
+        android:background="@drawable/frame_style3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -80,7 +80,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:background="#33000000"
+        android:background="@drawable/frame_style2"
         app:layout_constraintStart_toEndOf="@id/calendar"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -90,10 +90,10 @@
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
-        android:background="#33000000"
+        android:background="@drawable/frame_style2"
         android:text="+"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="@+id/View"
         app:layout_constraintTop_toBottomOf="@+id/View" />
 

@@ -75,14 +75,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- 予定表示部分の背景 -->
+    <!-- 占い表示部分の背景 -->
     <View
         android:id="@+id/View"
         android:layout_width="350dp"
         android:layout_height="145dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
-        android:background="#33000000"
+        android:background="@drawable/frame_style"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -110,7 +110,7 @@
         app:layout_constraintStart_toStartOf="@+id/View"
         app:layout_constraintTop_toTopOf="@+id/View" />
 
-    <!-- 予定表示部分（スクロール） -->
+    <!-- 占い表示部分（スクロール） -->
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="350dp"
@@ -184,7 +184,7 @@
                     android:text=""
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toEndOf="@+id/time1"
-                    app:layout_constraintTop_toTopOf="@+id/toalstar"  />
+                    app:layout_constraintTop_toTopOf="@+id/totalstar"  />
 
             </LinearLayout>
 

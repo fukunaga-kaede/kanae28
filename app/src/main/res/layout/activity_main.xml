@@ -27,8 +27,7 @@
         android:layout_height="73dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="80dp"
-        android:background="#32FFF5D0"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:background="@drawable/frame_style4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/schedule" />
@@ -39,7 +38,7 @@
         android:layout_width="74dp"
         android:layout_height="76dp"
         android:layout_marginStart="50dp"
-        android:background="#32FFF5D0"
+        android:background="@drawable/frame_style4"
         app:layout_constraintStart_toEndOf="@+id/schedule"
         app:layout_constraintTop_toTopOf="@+id/schedule"
         app:srcCompat="@drawable/fortune" />
@@ -51,7 +50,7 @@
         android:layout_width="74dp"
         android:layout_height="76dp"
         android:layout_marginStart="50dp"
-        android:background="#32FFF5D0"
+        android:background="@drawable/frame_style4"
         app:layout_constraintStart_toEndOf="@+id/fortune"
         app:layout_constraintTop_toTopOf="@+id/fortune"
         app:srcCompat="@drawable/calender" />
