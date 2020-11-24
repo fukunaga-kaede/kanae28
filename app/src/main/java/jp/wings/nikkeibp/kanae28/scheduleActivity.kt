@@ -26,27 +26,20 @@ class scheduleActivity : AppCompatActivity() {
         //　時間に合わせてメッセージの内容を変更
         var greetText : TextView = findViewById(R.id.message)
 
-        if( 4 <= time && time < 9 ){
-            greetText.text = "おはようございます、お嬢様。\n本日もよい一日をお過ごしくださいませ。"
-        }else if( 9 <= time && time < 15 ){
-            greetText.text = "今日もお仕事頑張ってくださいね。\n応援しております。"
-        }else if( 15 <= time && time < 18 ){
-            greetText.text = "そろそろお疲れではないですか。\n無理しないでくださいね。"
-        }else if( 18 <= time && time < 21 ){
-            greetText.text = "お帰りなさいませ、お嬢様。\nお仕事、お疲れ様でした。"
-        }else{
-            greetText.text = "お嬢様、本日もお疲れ様でした。\nおやすみなさいませ。"
+        when {
+            4 <= time && time < 9  -> greetText.text = "おはようございます、お嬢様。\n本日もよい一日をお過ごしくださいませ。"
+            9 <= time && time < 15 -> greetText.text = "今日もお仕事頑張ってくださいね。\n応援しております。"
+            15 <= time && time < 18 -> greetText.text = "そろそろお疲れではないですか。\n無理しないでくださいね。"
+            18 <= time && time < 21 -> greetText.text = "お帰りなさいませ、お嬢様。\nお仕事、お疲れ様でした。"
+            else -> greetText.text = "お嬢様、本日もお疲れ様でした。\nおやすみなさいませ。"
         }
-
         //時間に合わせて背景画像を変更
         val room : ImageView = findViewById<ImageView>(R.id.room)
 
-        if( 4 <= time && time < 16 ){
-            room.setImageResource(R.drawable.room1)
-        }else if( 16 <= time && time < 19 ){
-            room.setImageResource(R.drawable.room2)
-        }else{
-            room.setImageResource(R.drawable.room3)
+        when {
+            4 <= time && time < 16 -> room.setImageResource(R.drawable.room1)
+            16 <= time && time < 19 -> room.setImageResource(R.drawable.room2)
+            else -> room.setImageResource(R.drawable.room3)
         }
 
         // 「×」ボタンで消える

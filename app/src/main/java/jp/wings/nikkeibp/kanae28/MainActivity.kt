@@ -2,11 +2,13 @@ package jp.wings.nikkeibp.kanae28
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_fortune.*
 import java.util.*
 
 
@@ -52,27 +54,35 @@ class MainActivity : AppCompatActivity() {
         //　時間に合わせてメッセージの内容を変更
         var greetText : TextView = findViewById(R.id.message)
 
-        if( 4 <= time && time < 9 ){
-            greetText.text = "おはようございます、お嬢様。\n本日もよい一日をお過ごしくださいませ。"
-        }else if( 9 <= time && time < 15 ){
-            greetText.text = "今日もお仕事頑張ってくださいね。\n応援しております。"
-        }else if( 15 <= time && time < 18 ){
-            greetText.text = "そろそろお疲れではないですか。\n無理しないでくださいね。"
-        }else if( 18 <= time && time < 21 ){
-            greetText.text = "お帰りなさいませ、お嬢様。\nお仕事、お疲れ様でした。"
-        }else{
-            greetText.text = "お嬢様、本日もお疲れ様でした。\nおやすみなさいませ。"
+        when {
+            4 <= time && time < 9  -> greetText.text = "おはようございます、お嬢様。\n本日もよい一日をお過ごしくださいませ。"
+            9 <= time && time < 15 -> greetText.text = "今日もお仕事頑張ってくださいね。\n応援しております。"
+            15 <= time && time < 18 -> greetText.text = "そろそろお疲れではないですか。\n無理しないでくださいね。"
+            18 <= time && time < 21 -> greetText.text = "お帰りなさいませ、お嬢様。\nお仕事、お疲れ様でした。"
+            else -> greetText.text = "お嬢様、本日もお疲れ様でした。\nおやすみなさいませ。"
         }
 
         //時間に合わせて背景画像を変更
         val room : ImageView = findViewById<ImageView>(R.id.room)
 
-        if( 4 <= time && time < 16 ){
-            room.setImageResource(R.drawable.room1)
-        }else if( 16 <= time && time < 19 ){
-            room.setImageResource(R.drawable.room2)
-        }else{
-            room.setImageResource(R.drawable.room3)
+        when {
+            4 <= time && time < 16 -> room.setImageResource(R.drawable.room1)
+            16 <= time && time < 19 -> room.setImageResource(R.drawable.room2)
+            else -> room.setImageResource(R.drawable.room3)
+        }
+
+
+        var secretButton : Button = findViewById(R.id.secret)
+        secretButton.setOnClickListener {
+            val count = Random().nextInt(4)
+            when {
+                count == 0 -> greetText.text = "お嬢様のこと、いつも応援しております"
+                count == 1 -> greetText.text = "何かお悩みがありましたらお聞きしますよ"
+                count == 2 -> greetText.text = "私はいつでもお嬢様の味方ですよ"
+                count == 3 -> greetText.text = "ひとりで無理しないでくださいね"
+                count == 4 -> greetText.text = "いつも頑張っておられること、私は知っていますよ"
+                else -> greetText.text = ""
+            }
         }
 
     }
