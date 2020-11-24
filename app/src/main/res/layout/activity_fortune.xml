@@ -5,36 +5,284 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <TextView
-        android:id="@+id/textView1"
+    <!-- 背景画像-->
+    <ImageView
+        android:id="@+id/room"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/room1" />
+
+
+    <!--執事(画像)-->
+    <ImageView
+        android:id="@+id/shitsuji1"
+        android:layout_width="665dp"
+        android:layout_height="340dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shitsuji" />
+
+    <!--吹き出し内のレイアウト用余白-->
+    <Space
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/topSpace"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/situzi"/>
+
+    <!--吹き出しの背景-->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-10dp"
+        android:background="#33000000"
+        app:layout_constraintBottom_toBottomOf="@+id/message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topSpace" />
+
+    <!--執事(文字)-->
+    <TextView
+        android:id="@+id/situzi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="二階堂"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/message"
+        app:layout_constraintEnd_toStartOf="@+id/message"
+        app:layout_constraintStart_toStartOf="@+id/message" />
+
+    <!--台詞-->
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 予定表示部分の背景 -->
+    <View
+        android:id="@+id/View"
+        android:layout_width="350dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:background="#33000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/textView1"
-        app:layout_constraintTop_toBottomOf="@id/textView1" />
+    <!-- 予定表示部分の閉じるボタン -->
+    <Button
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#00FFFFFF"
+        android:text="×"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/View"
+        app:layout_constraintTop_toTopOf="@+id/View" />
 
+    <!-- 文字（本日の予定） -->
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/textView2"
-        app:layout_constraintTop_toBottomOf="@id/textView2" />
+        android:id="@+id/today"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="100dp"
+        android:text="本日の運勢"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/View"
+        app:layout_constraintTop_toTopOf="@+id/View" />
 
+    <!-- 予定表示部分（スクロール） -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="350dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- 予定表示部分（内容） -->
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/LinearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="総合運"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/scrollView"
+                    app:layout_constraintTop_toTopOf="@+id/scrollView" />
+
+                <TextView
+                    android:id="@+id/totalstar"
+                    android:layout_width="255dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintStart_toEndOf="@+id/total"
+                    app:layout_constraintTop_toTopOf="@+id/scrollView"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/love"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:text="恋愛運"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/scrollView"
+                    app:layout_constraintTop_toTopOf="@+id/total" />
+
+                <TextView
+                    android:id="@+id/lovestar"
+                    android:layout_width="255dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintStart_toEndOf="@+id/time1"
+                    app:layout_constraintTop_toTopOf="@+id/toalstar"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/job"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:text="仕事運"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/scrollView"
+                    app:layout_constraintTop_toTopOf="@+id/love" />
+
+                <TextView
+                    android:id="@+id/jobstar"
+                    android:layout_width="255dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintStart_toEndOf="@+id/time1"
+                    app:layout_constraintTop_toTopOf="@+id/lovestar"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:text="金運"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/scrollView"
+                    app:layout_constraintTop_toTopOf="@+id/job" />
+
+                <TextView
+                    android:id="@+id/moneystar"
+                    android:layout_width="255dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintStart_toEndOf="@+id/scrollView"
+                    app:layout_constraintTop_toTopOf="@+id/jobstar"  />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/item"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:text=""
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="@+id/scrollView"
+                app:layout_constraintTop_toTopOf="@+id/money" />
+
+
+            <TextView
+                android:id="@+id/color"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:text=""
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="@+id/scrollView"
+                app:layout_constraintTop_toTopOf="@+id/item" />
+
+
+            <!-- 予定表示部分（下の余白） -->
+            <Space
+                android:id="@+id/Space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/scrollView" />
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
