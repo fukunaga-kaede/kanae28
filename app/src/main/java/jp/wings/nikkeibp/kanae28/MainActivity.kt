@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
         var secretButton : Button = findViewById(R.id.secret)
         secretButton.setOnClickListener {
-            val count = Random().nextInt(4)
+            val count = Random().nextInt(5)
             when {
                 count == 0 -> greetText.text = "お嬢様のこと、いつも応援しております"
                 count == 1 -> greetText.text = "何かお悩みがありましたらお聞きしますよ"
