@@ -141,7 +141,7 @@
                     android:layout_height="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
-                    android:text="10:00"
+                    android:text="終日"
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toStartOf="@+id/scrollView"
                     app:layout_constraintTop_toTopOf="@+id/scrollView" />
@@ -152,7 +152,7 @@
                     android:layout_height="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
-                    android:text="バイト"
+                    android:text="年休"
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toEndOf="@+id/time1"
                     app:layout_constraintTop_toTopOf="@+id/scrollView"  />
@@ -171,7 +171,7 @@
                     android:layout_height="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="30dp"
-                    android:text="10:00"
+                    android:text="終日"
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toStartOf="@+id/scrollView"
                     app:layout_constraintTop_toTopOf="@+id/time1" />
@@ -182,7 +182,7 @@
                     android:layout_height="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="30dp"
-                    android:text="バイト"
+                    android:text="記念日"
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toEndOf="@+id/time1"
                     app:layout_constraintTop_toTopOf="@+id/sche1"  />
@@ -212,7 +212,7 @@
                     android:layout_height="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="30dp"
-                    android:text="バイト"
+                    android:text="美容院"
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toEndOf="@+id/time1"
                     app:layout_constraintTop_toTopOf="@+id/sche2"  />
@@ -231,7 +231,7 @@
                     android:layout_height="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="30dp"
-                    android:text="10:00"
+                    android:text="15:00"
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toStartOf="@+id/scrollView"
                     app:layout_constraintTop_toTopOf="@+id/time3" />
@@ -242,7 +242,7 @@
                     android:layout_height="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="30dp"
-                    android:text="バイト"
+                    android:text="ネイル"
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toEndOf="@+id/time1"
                     app:layout_constraintTop_toTopOf="@+id/sche3"  />
@@ -261,7 +261,7 @@
                     android:layout_height="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="30dp"
-                    android:text="10:00"
+                    android:text="18:00"
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toStartOf="@+id/scrollView"
                     app:layout_constraintTop_toTopOf="@+id/time4" />
@@ -272,7 +272,7 @@
                     android:layout_height="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="30dp"
-                    android:text="バイト"
+                    android:text="デート"
                     android:textColor="#FFFFFF"
                     app:layout_constraintStart_toEndOf="@+id/time1"
                     app:layout_constraintTop_toTopOf="@+id/sche4"  />
